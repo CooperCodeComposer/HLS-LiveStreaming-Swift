@@ -28,6 +28,8 @@ class MovieViewController: UIViewController {
         
             destination.player = AVPlayer(URL: url!)
             
+            destination.player?.play()
+            
         }
         
     }

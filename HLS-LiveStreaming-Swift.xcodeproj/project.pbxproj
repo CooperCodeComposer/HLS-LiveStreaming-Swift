@@ -12,7 +12,6 @@
 		ED530CE21D0E9D0000EAA0FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED530CE11D0E9D0000EAA0FC /* Assets.xcassets */; };
 		ED530CE51D0E9D0000EAA0FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED530CE31D0E9D0000EAA0FC /* LaunchScreen.storyboard */; };
 		ED530CED1D0E9D4D00EAA0FC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED530CEC1D0E9D4D00EAA0FC /* AVFoundation.framework */; };
-		ED530CEF1D0E9D5600EAA0FC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED530CEE1D0E9D5600EAA0FC /* MediaPlayer.framework */; };
 		ED530CF11D0E9E4400EAA0FC /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED530CF01D0E9E4400EAA0FC /* AVKit.framework */; };
 		ED530CF51D0E9F2B00EAA0FC /* HTMLVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED530CF41D0E9F2B00EAA0FC /* HTMLVideoViewController.swift */; };
 		ED530CFB1D0EA13600EAA0FC /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED530CFA1D0EA13600EAA0FC /* MovieViewController.swift */; };
@@ -28,7 +27,6 @@
 		ED530CE41D0E9D0000EAA0FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED530CE61D0E9D0000EAA0FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED530CEC1D0E9D4D00EAA0FC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		ED530CEE1D0E9D5600EAA0FC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		ED530CF01D0E9E4400EAA0FC /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		ED530CF41D0E9F2B00EAA0FC /* HTMLVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLVideoViewController.swift; sourceTree = "<group>"; };
 		ED530CFA1D0EA13600EAA0FC /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +40,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED530CF11D0E9E4400EAA0FC /* AVKit.framework in Frameworks */,
-				ED530CEF1D0E9D5600EAA0FC /* MediaPlayer.framework in Frameworks */,
 				ED530CED1D0E9D4D00EAA0FC /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				ED530CF01D0E9E4400EAA0FC /* AVKit.framework */,
-				ED530CEE1D0E9D5600EAA0FC /* MediaPlayer.framework */,
 				ED530CEC1D0E9D4D00EAA0FC /* AVFoundation.framework */,
 				ED530CD91D0E9D0000EAA0FC /* HLS-LiveStreaming-Swift */,
 				ED530CD81D0E9D0000EAA0FC /* Products */,
