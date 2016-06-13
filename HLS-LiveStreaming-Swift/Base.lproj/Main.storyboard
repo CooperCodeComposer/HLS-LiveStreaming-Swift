@@ -1,25 +1,106 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="k8H-4P-OfJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="fmh-br-glp">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="k8H-4P-OfJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="tl7-LZ-Eid">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Zui-OQ-LeK" kind="relationship" relationship="viewControllers" id="O4r-hN-eEi"/>
+                        <segue destination="8kY-J6-PDD" kind="relationship" relationship="viewControllers" id="uuE-XM-rbk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K08-uv-Grr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="462"/>
+        </scene>
+        <!--AV Player-->
+        <scene sceneID="a0p-z8-XgK">
+            <objects>
+                <viewController id="Zui-OQ-LeK" customClass="MovieViewController" customModule="HLS_LiveStreaming_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="mwp-Ee-7MW"/>
+                        <viewControllerLayoutGuide type="bottom" id="mq9-Ki-LlV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="9G3-cO-DM0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJw-Fm-aP0">
+                                <rect key="frame" x="232" y="279" width="136" height="43"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="23"/>
+                                <state key="normal" title="PLAY MOVIE">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CFU-ct-DkW" kind="show" id="gHo-WF-ADa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qJw-Fm-aP0" firstAttribute="centerY" secondItem="9G3-cO-DM0" secondAttribute="centerY" id="MwP-9W-rZb"/>
+                            <constraint firstItem="qJw-Fm-aP0" firstAttribute="centerX" secondItem="9G3-cO-DM0" secondAttribute="centerX" id="oe5-rl-d3s"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="AV Player" id="SjF-5O-BbE"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qV3-Ie-yXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1110" y="457"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="Id1-3g-Osl">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="CFU-ct-DkW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLg-I2-4UT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1786" y="457"/>
+        </scene>
+        <!--HTML5 Video-->
+        <scene sceneID="Hjv-5I-h29">
+            <objects>
+                <viewController id="8kY-J6-PDD" customClass="HTMLVideoViewController" customModule="HLS_LiveStreaming_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sY9-Oz-xuZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="8gy-gw-Km9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nY9-uA-MGf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xat-8f-gYJ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8gy-gw-Km9" firstAttribute="top" secondItem="xat-8f-gYJ" secondAttribute="bottom" id="0cd-3h-1Gi"/>
+                            <constraint firstAttribute="trailing" secondItem="xat-8f-gYJ" secondAttribute="trailing" id="4cJ-Ky-Pxt"/>
+                            <constraint firstItem="xat-8f-gYJ" firstAttribute="top" secondItem="sY9-Oz-xuZ" secondAttribute="bottom" id="Yaa-sW-Jhh"/>
+                            <constraint firstItem="xat-8f-gYJ" firstAttribute="leading" secondItem="nY9-uA-MGf" secondAttribute="leading" id="wkz-4X-dEh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="HTML5 Video" id="xkd-6H-ake"/>
+                    <connections>
+                        <outlet property="webView" destination="xat-8f-gYJ" id="fZQ-al-Trm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0DP-th-8pE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="1293"/>
         </scene>
     </scenes>
 </document>
