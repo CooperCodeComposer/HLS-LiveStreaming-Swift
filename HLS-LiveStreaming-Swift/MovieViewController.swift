@@ -14,7 +14,6 @@ class MovieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue,
@@ -24,9 +23,9 @@ class MovieViewController: UIViewController {
         
         let url = URL(string: "https://s3-us-west-2.amazonaws.com/hlsappdemo/TheAnimalVideo/theanimal.m3u8")
         
-        if url != nil {
-        
-            destination.player = AVPlayer(url: url!)
+        if let url = url {
+            
+            destination.player = AVPlayer(url: url)
             
             destination.player?.play()
             

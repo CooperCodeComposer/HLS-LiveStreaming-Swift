@@ -3,7 +3,6 @@
 //  HLS-LiveStreaming-Swift
 //
 //  Created by Alistair Cooper on 6/13/16.
-//  Copyright © 2016 Alistair Cooper. All rights reserved.
 //
 
 import UIKit
@@ -11,34 +10,34 @@ import UIKit
 class HTMLVideoViewController: UIViewController {
     
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        webView.delegate = self
+        
         let url = Bundle.main.url(forResource: "htmlView", withExtension:"html")
         
-        let myRequest = URLRequest(url: url!)
-        
-        webView.loadRequest(myRequest)
-        
+        if let url = url {
+            
+            let myRequest = URLRequest(url: url)
+            
+            webView.loadRequest(myRequest)
+            activityIndicator.startAnimating()
 
+        }
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension HTMLVideoViewController: UIWebViewDelegate {
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        activityIndicator.stopAnimating()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        activityIndicator.stopAnimating()
+        print("Error loading movie")
     }
-    */
-
 }

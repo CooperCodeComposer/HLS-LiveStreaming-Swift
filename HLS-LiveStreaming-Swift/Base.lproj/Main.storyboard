@@ -89,23 +89,30 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Sco-qE-F1h">
+                                <rect key="frame" x="169" y="300.5" width="37" height="37"/>
+                                <color key="color" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8gy-gw-Km9" firstAttribute="top" secondItem="xat-8f-gYJ" secondAttribute="bottom" id="0cd-3h-1Gi"/>
                             <constraint firstAttribute="trailing" secondItem="xat-8f-gYJ" secondAttribute="trailing" id="4cJ-Ky-Pxt"/>
                             <constraint firstItem="xat-8f-gYJ" firstAttribute="top" secondItem="sY9-Oz-xuZ" secondAttribute="bottom" id="Yaa-sW-Jhh"/>
+                            <constraint firstItem="Sco-qE-F1h" firstAttribute="centerX" secondItem="xat-8f-gYJ" secondAttribute="centerX" id="aKH-ic-GSS"/>
                             <constraint firstItem="xat-8f-gYJ" firstAttribute="leading" secondItem="nY9-uA-MGf" secondAttribute="leading" id="wkz-4X-dEh"/>
+                            <constraint firstItem="Sco-qE-F1h" firstAttribute="centerY" secondItem="xat-8f-gYJ" secondAttribute="centerY" id="xpP-m1-hBR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="HTML5 Video" id="xkd-6H-ake"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Sco-qE-F1h" id="s1B-8c-BO5"/>
                         <outlet property="webView" destination="xat-8f-gYJ" id="fZQ-al-Trm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0DP-th-8pE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="1293"/>
+            <point key="canvasLocation" x="262" y="1200"/>
         </scene>
     </scenes>
 </document>
