@@ -16,9 +16,9 @@ class HTMLVideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = NSBundle.mainBundle().URLForResource("htmlView", withExtension:"html")
+        let url = Bundle.main.url(forResource: "htmlView", withExtension:"html")
         
-        let myRequest = NSURLRequest(URL: url!)
+        let myRequest = URLRequest(url: url!)
         
         webView.loadRequest(myRequest)
         
